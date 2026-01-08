@@ -1,0 +1,54 @@
+body {
+  font-family: Arial, sans-serif;
+  color: #333;
+  margin: 0;
+  padding: 20px;
+  line-height: 1.6;
+}
+
+.main-wrapper {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+h1 {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+p{
+    font-size: 1.2rem;;
+}
+
+.main-wrapper > div:first-of-type {
+  text-align: center;  
+  margin-bottom: 60px;
+}
+
+.main-wrapper > div:nth-of-type(n+2) {
+  display: flex;
+  align-items: center; 
+  gap: 50px;           
+  margin-bottom: 50px;
+}
+
+.main-wrapper > div:nth-of-type(3) {
+  flex-direction: row-reverse;
+}
+
+.main-wrapper img {
+  width: 100%;
+  max-width: 450px;
+  height: auto;
+  display: block;
+}
+
+.main-wrapper h2 {
+  font-size: 2rem;
+  margin-top: 0;
+}
+
+.main-wrapper > div > div {
+  flex: 1;
+}

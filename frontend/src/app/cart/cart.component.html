@@ -1,0 +1,88 @@
+<div>
+  <div class="parent">
+    <div class="cart">
+      <div>My Cart</div>
+      <div class="cart" *ngIf="!cart">
+        <p
+          style="
+            width: 400px;
+            color: red;
+            font-size: 1.5rem;
+            text-align: center;
+          "
+        >
+          Cart is empty!!!
+        </p>
+      </div>
+      <div *ngFor="let c of cart" class="pizza-view">
+        <div class="item-view">
+          <img src="{{ c.image }}" style="width: 50px" />
+        </div>
+        <div
+          class="indicator"
+          [ngClass]="c.type === 'veg' ? 'veg-box' : 'nonveg-box'"
+        ></div>
+        <div class="item-view">{{ c.name | titlecase }}</div>
+        <div class="item-view">{{ c.price | currency : "INR" }}</div>
+        <div>
+          <button
+            (click)="changeQty('-', c.name)"
+            style="
+              background-color: rgb(139, 136, 136);
+              color: white;
+              font-size: 1.5rem;
+              font-weight: bold;
+            "
+          >
+            -</button
+          >{{ c.quantity
+          }}<button
+            (click)="changeQty('+', c.name)"
+            style="
+              background-color: rgb(140, 143, 140);
+              color: white;
+              font-size: 1.5rem;
+              font-weight: bold;
+            "
+          >
+            +
+          </button>
+        </div>
+        <div>{{ c.quantity * c.price | currency : "INR" }}</div>
+        <div class="item-view">
+          <button
+            (click)="deleteItem(c.name)"
+            style="
+              background-color: rgb(225, 76, 76);
+              color: white;
+              font-size: 1.2rem;
+              font-weight: bold;
+            "
+          >
+            delete
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div class="checkout">
+      <div>The total amount of</div>
+      <div>
+        <p>Pizza</p>
+        <p>{{ cartTotalAmount | currency : "INR" }}</p>
+      </div>
+      <div>
+        <p>Ingredients</p>
+        <p>{{ ingredientsTotalAmount | currency : "INR" }}</p>
+      </div>
+      <div>
+        Total: {{ cartTotalAmount + ingredientsTotalAmount | currency : "INR" }}
+      </div>
+      <div>
+        <button (click)="pay()">Pay</button>&nbsp;<button (click)="clear()">
+          Clear
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

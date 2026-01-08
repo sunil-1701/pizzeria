@@ -1,0 +1,23 @@
+<div class="build-pizza-container">
+  <p style="text-align: center">
+    Pizzeria now gives you options to build your own pizza. Customize your pizza
+    by choosing ingredients from the list given below
+  </p>
+  <table>
+    <tr *ngFor="let i of ingredients">
+      <td><img src="{{ i.image }}" style="width: 50px" /></td>
+      <td>
+        <p>{{ i.tname }}&nbsp; {{ i.price }}</p>
+      </td>
+      <td>
+        <input
+          type="checkbox"
+          (change)="addIngredient($event, i.price, i.tname)"
+        />
+        Add
+      </td>
+    </tr>
+  </table>
+  <h2>Total Cost:{{ total }}</h2>
+  <button (click)="addToCart()">Build Ur Pizza</button>
+</div>

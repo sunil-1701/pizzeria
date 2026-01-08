@@ -1,0 +1,28 @@
+<nav>
+  <h1>Pizzeria</h1>
+  <a routerLink="/home" routerLinkActive="selectedRoute"
+    ><img src="../assets/logo.png" id="logo" /></a
+  >&nbsp;&nbsp;
+  <a routerLink="/order" routerLinkActive="selectedRoute">Order Pizza</a
+  >&nbsp;&nbsp;
+  <a routerLink="/custom" routerLinkActive="selectedRoute">Build Ur Pizza</a
+  >&nbsp;&nbsp;
+  <a routerLink="/cart" routerLinkActive="selectedRoute" id="cart">
+    Shopping Cart
+    <p
+      style="
+        background-color: rgb(83, 81, 81);
+        border-radius: 15%;
+        width: 30px;
+        text-align: center;
+        margin-left: right;
+        color: white;
+        display: inline-block;
+      "
+    >
+      {{ cartSize }}
+    </p>
+  </a>
+</nav>
+
+<router-outlet></router-outlet>

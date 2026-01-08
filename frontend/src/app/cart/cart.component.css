@@ -1,0 +1,71 @@
+.parent {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  padding: 40px;
+  background-color: #f8f9fa; 
+  font-family: Arial, sans-serif;
+}
+
+.cart, .checkout {
+  background: white;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  padding: 0; 
+}
+
+.cart > div:first-child, 
+.checkout > div:first-child {
+  padding: 15px 20px;
+  font-size: 1.5rem;
+  border-bottom: 1px solid #ddd;
+  background-color: #fdfdfd;
+}
+
+.pizza-view {
+  display: flex;
+  align-items: center;
+  padding: 15px 20px;
+  border-bottom: 1px solid #eee;
+  gap: 20px;
+}
+
+.item-view {
+  flex: 1;
+  font-weight: bold;
+}
+
+.item-view button {
+  background-color: transparent;
+  color: #d9534f;
+  border: 1px solid #d9534f;
+  padding: 5px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.checkout {
+  width: 350px;
+  height: fit-content;
+}
+
+.checkout > div:not(:first-child) {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 20px;
+}
+
+.checkout > div:last-child {
+  border-top: 1px solid #ddd;
+  margin-top: 10px;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+.indicator {
+  width: 18px;
+  height: 18px;
+  margin-bottom: 30px; 
+}
+.veg-box { background-color: #28a745; }
+.nonveg-box { background-color: #dc3545; }
