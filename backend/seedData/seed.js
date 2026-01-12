@@ -252,7 +252,7 @@ const pizzaMenu = [
     price: "625",
     name: "Ultimate chicken",
     image:
-      "https://www.shutterstock.com/image-photo/pizza-margherita-italian-246331354?src=LdqMHwukPR6yE1l-dL7uMQ-1-11%22",
+      "https://www.shutterstock.com/shutterstock/photos/246331354/display_1500/stock-photo-pizza-margherita-italian-246331354.jpg",
     description:
       "This is popular italian pizza flavoured with BBA sauce, flavored butter. it has spongy base which gives unique taste with multiple toppings",
     ingredients: [
